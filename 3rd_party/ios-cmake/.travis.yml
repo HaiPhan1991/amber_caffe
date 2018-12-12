@@ -1,0 +1,16 @@
+language: objective-c
+
+matrix:
+  fast_finish: true
+  include:
+    - os: osx
+      compiler: clang
+      env: IOS_PLATFORM=SIMULATOR
+    - os: osx
+      compiler: clang
+      env: IOS_PLATFORM=OS
+
+install: true
+
+script:
+  - ./.travis/build.sh
